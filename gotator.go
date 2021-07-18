@@ -115,9 +115,13 @@ func permutatorWorker(tracker2 chan empty, domain string, permutationsChain chan
 				domSplit := strings.Split(domain, ".")
 				firstElement := domSplit[0]
 				newSubDomain := firstElement + perm + "." + strings.Join(domSplit[1:], ".")
-				fmt.Println(newSubDomain)
-				newSubDomain = firstElement + "-" + perm + "." + strings.Join(domSplit[1:], ".")
-				fmt.Println(newSubDomain)
+                                fmt.Println(newSubDomain)
+                                newSubDomain = firstElement + "." + perm + "." + strings.Join(domSplit[1:], ".")
+                                fmt.Println(newSubDomain)
+                                newSubDomain = firstElement + "-" + perm + "." + strings.Join(domSplit[1:], ".")
+                                fmt.Println(newSubDomain)
+                                newSubDomain = firstElement + "." + perm + "." + strings.Join(domSplit[1:], ".")
+                                fmt.Println(newSubDomain)
 			}
 		}
 	}
